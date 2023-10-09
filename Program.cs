@@ -15,6 +15,8 @@ namespace FilmesApi
 
             builder.Services.AddDbContext<FilmeContext>(options => options.UseMySql(conectionString, ServerVersion.AutoDetect(conectionString)));
 
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             // Add services to the container.
 
             builder.Services.AddControllers();
